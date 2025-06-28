@@ -14,17 +14,33 @@
 
     <title>Frontend Mentor | Loopstudios landing page</title>
 
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="dist/styles.css" />
   </head>
   <body>
-    <main>
+    <main class="txt-ff-josefin-sans">
       <header class="header grid height-100vh padding-20 txt-white">
         <div class="flex">
           <div>
             <img src="assets/images/logo.svg" alt="company logo" />
           </div>
           <nav
-            class="nav grid-center-vertical flex-item-lg-right height-100vh height-lg-min bg-black bg-lg-transparent is-hidden"
+            class="nav flex-item-lg-right flex-item-center-vertical height-100vh height-lg-min bg-black bg-lg-transparent is-hidden"
           >
             <button class="nav-close padding-20">
               <img src="assets/images/icon-close.svg" alt="close menu" />
@@ -60,9 +76,11 @@
               alt="VR"
             />
           </div>
-          <div class="margin-md-top grid-span-2 bg-white padding-15">
-            <h3 class="txt-uppercase">The leader in interactive VR</h3>
-            <p>
+          <div class="margin-md-top grid-span-2 bg-white padding-20">
+            <h3 class="txt-uppercase txt-fw-400">
+              The leader in interactive VR
+            </h3>
+            <p class="txt-ff-alata txt-fw-300">
               Founded in 2011, Loopstudios has been producing world-class
               virtual reality projects for some of the best companies around the
               globe. Our award-winning creations have transformed businesses
@@ -85,7 +103,7 @@
           <div>The <br />curiosity</div>
           <div>Make it <br />fisheye</div>
           <button
-            class="grid-item-center grid-item-right padding-inline-35 padding-inline-lg-10 border-black padding-15 margin-20 txt-spacing-26 txt-uppercase"
+            class="grid-item-center grid-item-right padding-inline-35 padding-inline-lg-10 border-black padding-15 margin-20 margin-lg-none txt-spacing-26 txt-uppercase"
           >
             See all
           </button>
@@ -119,7 +137,9 @@
           /></a>
         </div>
 
-        <p class="grid-item-right">© 2021 Loopstudios. All rights reserved.</p>
+        <p class="grid-item-right txt-grey">
+          © 2021 Loopstudios. All rights reserved.
+        </p>
       </footer>
     </main>
     <script src="assets/javascript/menu.js"></script>

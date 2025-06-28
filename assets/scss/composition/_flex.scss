@@ -7,6 +7,9 @@
 .flex-item-right {
   margin-left: auto;
 }
+.flex-item-center-vertical {
+  align-self: center;
+}
 
 @include breakpoints.media(medium) {
   .flex-item-lg-right {

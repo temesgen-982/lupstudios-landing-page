@@ -310,6 +310,10 @@ textarea:not([rows]) {
   margin-left: auto;
 }
 
+.flex-item-center-vertical {
+  align-self: center;
+}
+
 @media (min-width: 42.5rem) {
   .flex-item-lg-right {
     margin-left: auto;
@@ -351,6 +355,9 @@ textarea:not([rows]) {
   .margin-md-right {
     margin-right: -30%;
   }
+  .margin-lg-none {
+    margin: 0;
+  }
 }
 .txt-white {
   color: var(--clr-primary-white);
@@ -376,11 +383,11 @@ textarea:not([rows]) {
   font-weight: var(--fw-300);
 }
 
-.txt-ff-josefin {
+.txt-ff-josefin-sans {
   font-family: var(--ff-base-josefin);
 }
 
-.txt-ff-atala {
+.txt-ff-alata {
   font-family: var(--ff-base-atala);
 }
 

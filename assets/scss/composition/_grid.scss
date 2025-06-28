@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  gap: 1em;
+}
+
+.grid-center-vertical {
+  display: grid;
+  align-items: center;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+.grid-gap-2 {
+  gap: 2em;
+}
+
+.grid-item-center {
+  justify-self: center;
+}

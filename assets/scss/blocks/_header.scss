@@ -1,0 +1,25 @@
+@use "../abstracts/breakpoints" as breakpoints;
+
+.header {
+  background-image: url("../assets/images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-rows: auto 1fr;
+  .nav {
+    grid-template-rows: auto 1fr;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    .nav-close {
+      justify-self: end;
+    }
+  }
+  @include breakpoints.media(large) {
+    .nav-open {
+      display: none;
+    }
+  }
+}

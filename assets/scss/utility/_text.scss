@@ -1,0 +1,41 @@
+@use "../abstracts/functions" as functions;
+
+.txt-white {
+  color: var(--clr-primary-white);
+}
+
+.txt-black {
+  color: var(--clr-primary-black);
+}
+
+.txt-grey {
+  color: var(--clr-primary-grey-200);
+}
+
+.txt-fs-45 {
+  font-size: functions.rem(45);
+}
+
+.txt-uppercase {
+  text-transform: uppercase;
+}
+
+.txt-fw-300 {
+  font-weight: var(--fw-300);
+}
+
+.txt-ff-josefin {
+  font-family: var(--ff-base-josefin);
+}
+
+.txt-ff-atala {
+  font-family: var(--ff-base-atala);
+}
+
+.txt-spacing-26 {
+  letter-spacing: 2.6px;
+}
+
+.txt-align-center {
+  text-align: center;
+}

@@ -1,0 +1,322 @@
+:root {
+  /* Primary */
+  --clr-primary-white: hsl(0, 0%, 100%);
+  --clr-primary-black: hsl(0, 0%, 0%);
+  --clr-primary-grey-200: hsl(0, 0%, 85%);
+}
+
+:root {
+  /* Typography */
+  --fs-paragraph: 15px;
+  --ff-base-atala: Alata;
+  --ff-base-josefin: Josefin Sans;
+  --fw-300: 300;
+  --fw-400: 400;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* https://piccalil.li/blog/a-more-modern-css-reset/ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.header {
+  background-image: url("../assets/images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-rows: auto 1fr;
+}
+.header .nav {
+  grid-template-rows: auto 1fr;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+.header .nav .nav-close {
+  justify-self: end;
+}
+@media (min-width: 56.25rem) {
+  .header .nav-open {
+    display: none;
+  }
+}
+
+.image-cards {
+  --clr-gradient-top: rgba(0, 0, 0, 0.1);
+  --clr-gradient-bottom: rgba(0, 0, 0, 0.6);
+}
+.image-cards div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0.5rem;
+  padding-top: 5rem;
+}
+
+.image-cards div:nth-of-type(1) {
+  background-image: linear-gradient(var(--clr-gradient-top), var(--clr-gradient-bottom)), url(../assets/images/mobile/image-deep-earth.jpg);
+}
+
+.image-cards div:nth-of-type(2) {
+  background-image: linear-gradient(var(--clr-gradient-top), var(--clr-gradient-bottom)), url(../assets/images/mobile/image-night-arcade.jpg);
+}
+
+.image-cards div:nth-of-type(3) {
+  background-image: linear-gradient(var(--clr-gradient-top), var(--clr-gradient-bottom)), url(../assets/images/mobile/image-soccer-team.jpg);
+}
+
+.image-cards div:nth-of-type(4) {
+  background-image: linear-gradient(var(--clr-gradient-top), var(--clr-gradient-bottom)), url(../assets/images/mobile/image-grid.jpg);
+}
+
+.image-cards div:nth-of-type(5) {
+  background-image: linear-gradient(var(--clr-gradient-top), var(--clr-gradient-bottom)), url(../assets/images/mobile/image-from-above.jpg);
+}
+
+.image-cards div:nth-of-type(6) {
+  background-image: linear-gradient(var(--clr-gradient-top), var(--clr-gradient-bottom)), url(../assets/images/mobile/image-pocket-borealis.jpg);
+}
+
+.image-cards div:nth-of-type(7) {
+  background-image: linear-gradient(var(--clr-gradient-top), var(--clr-gradient-bottom)), url(../assets/images/mobile/image-curiosity.jpg);
+}
+
+.image-cards div:nth-of-type(8) {
+  background-image: linear-gradient(var(--clr-gradient-top), var(--clr-gradient-bottom)), url(../assets/images/mobile/image-fisheye.jpg);
+}
+
+.grid {
+  display: grid;
+  gap: 1em;
+}
+
+.grid-center-vertical {
+  display: grid;
+  align-items: center;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+.grid-gap-2 {
+  gap: 2em;
+}
+
+.grid-item-center {
+  justify-self: center;
+}
+
+.flex {
+  display: flex;
+  gap: 1em;
+}
+
+.flex-item-right {
+  margin-left: auto;
+}
+
+.padding-15 {
+  padding: 0.9375rem;
+}
+
+.padding-20 {
+  padding: 1.25rem;
+}
+
+.padding-block-80 {
+  padding-block: 5rem;
+}
+
+.padding-inline-35 {
+  padding-inline: 2.1875rem;
+}
+
+.margin-20 {
+  margin: 1.25rem;
+}
+
+.txt-white {
+  color: var(--clr-primary-white);
+}
+
+.txt-black {
+  color: var(--clr-primary-black);
+}
+
+.txt-grey {
+  color: var(--clr-primary-grey-200);
+}
+
+.txt-fs-45 {
+  font-size: 2.8125rem;
+}
+
+.txt-uppercase {
+  text-transform: uppercase;
+}
+
+.txt-fw-300 {
+  font-weight: var(--fw-300);
+}
+
+.txt-ff-josefin {
+  font-family: var(--ff-base-josefin);
+}
+
+.txt-ff-atala {
+  font-family: var(--ff-base-atala);
+}
+
+.txt-spacing-26 {
+  letter-spacing: 2.6px;
+}
+
+.txt-align-center {
+  text-align: center;
+}
+
+.height-100vh {
+  min-height: 100vh;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.width-375 {
+  max-width: 23.4375rem;
+}
+
+@media (min-width: ) {
+  .width-lg-50 {
+    width: 50%;
+  }
+}
+.border-white {
+  border: 1px solid var(--clr-primary-white);
+}
+
+.border-black {
+  border: 1px solid var(--clr-primary-black);
+}
+
+.is-hidden {
+  display: none;
+}
+
+.bg-black {
+  background-color: var(--clr-primary-black);
+}
+
+/*# sourceMappingURL=styles.css.map */

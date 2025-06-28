@@ -349,6 +349,9 @@ textarea:not([rows]) {
   .padding-lg-none {
     padding: 0;
   }
+  .padding-lg-35 {
+    padding: 2.1875rem;
+  }
   .margin-md-top {
     margin-top: 30%;
   }

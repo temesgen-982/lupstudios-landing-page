@@ -1,3 +1,13 @@
+@use "../abstracts/breakpoints" as breakpoints;
+
 .bg-black {
   background-color: var(--clr-primary-black);
+}
+.bg-white {
+  background-color: var(--clr-primary-white);
+}
+@include breakpoints.media(medium) {
+  .bg-lg-transparent {
+    background-color: transparent;
+  }
 }

@@ -17,7 +17,14 @@
       justify-self: end;
     }
   }
-  @include breakpoints.media(large) {
+  @include breakpoints.media(medium) {
+    .nav {
+      position: relative;
+      display: block;
+      .nav-close {
+        display: none;
+      }
+    }
     .nav-open {
       display: none;
     }

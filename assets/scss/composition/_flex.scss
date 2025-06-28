@@ -1,7 +1,18 @@
+@use "../abstracts/breakpoints" as breakpoints;
+
 .flex {
   display: flex;
   gap: 1em;
 }
 .flex-item-right {
   margin-left: auto;
+}
+
+@include breakpoints.media(medium) {
+  .flex-item-lg-right {
+    margin-left: auto;
+  }
+  .flex-lg {
+    display: flex;
+  }
 }

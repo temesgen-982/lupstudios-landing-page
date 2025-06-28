@@ -1,4 +1,5 @@
 @use "../abstracts/functions" as functions;
+@use "../abstracts/breakpoints" as breakpoints;
 
 .padding-15 {
   padding: functions.rem(15);
@@ -14,4 +15,19 @@
 }
 .margin-20 {
   margin: functions.rem(20);
+}
+
+@include breakpoints.media(medium) {
+  .padding-inline-lg-10 {
+    padding-inline: functions.rem(20);
+  }
+  .padding-lg-none {
+    padding: 0;
+  }
+  .margin-md-top {
+    margin-top: 30%;
+  }
+  .margin-md-right {
+    margin-right: -30%;
+  }
 }

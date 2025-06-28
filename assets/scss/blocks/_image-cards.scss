@@ -1,66 +1,57 @@
+@use "../abstracts/breakpoints" as breakpoints;
+@use "sass:list";
+
+$image-names: (
+  "deep-earth",
+  "night-arcade",
+  "soccer-team",
+  "grid",
+  "from-above",
+  "pocket-borealis",
+  "curiosity",
+  "fisheye"
+);
+
 .image-cards {
   --clr-gradient-top: rgba(0, 0, 0, 0.1);
   --clr-gradient-bottom: rgba(0, 0, 0, 0.6);
+
   div {
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 0.5rem;
     padding-top: 5rem;
+    @include breakpoints.media(medium) {
+      background-size: stretch;
+      padding-top: 11rem;
+    }
   }
-}
-.image-cards div:nth-of-type(1) {
-  background-image: linear-gradient(
-      var(--clr-gradient-top),
-      var(--clr-gradient-bottom)
-    ),
-    url(../assets/images/mobile/image-deep-earth.jpg);
-}
-.image-cards div:nth-of-type(2) {
-  background-image: linear-gradient(
-      var(--clr-gradient-top),
-      var(--clr-gradient-bottom)
-    ),
-    url(../assets/images/mobile/image-night-arcade.jpg);
-}
-.image-cards div:nth-of-type(3) {
-  background-image: linear-gradient(
-      var(--clr-gradient-top),
-      var(--clr-gradient-bottom)
-    ),
-    url(../assets/images/mobile/image-soccer-team.jpg);
-}
-.image-cards div:nth-of-type(4) {
-  background-image: linear-gradient(
-      var(--clr-gradient-top),
-      var(--clr-gradient-bottom)
-    ),
-    url(../assets/images/mobile/image-grid.jpg);
-}
-.image-cards div:nth-of-type(5) {
-  background-image: linear-gradient(
-      var(--clr-gradient-top),
-      var(--clr-gradient-bottom)
-    ),
-    url(../assets/images/mobile/image-from-above.jpg);
-}
-.image-cards div:nth-of-type(6) {
-  background-image: linear-gradient(
-      var(--clr-gradient-top),
-      var(--clr-gradient-bottom)
-    ),
-    url(../assets/images/mobile/image-pocket-borealis.jpg);
-}
-.image-cards div:nth-of-type(7) {
-  background-image: linear-gradient(
-      var(--clr-gradient-top),
-      var(--clr-gradient-bottom)
-    ),
-    url(../assets/images/mobile/image-curiosity.jpg);
-}
-.image-cards div:nth-of-type(8) {
-  background-image: linear-gradient(
-      var(--clr-gradient-top),
-      var(--clr-gradient-bottom)
-    ),
-    url(../assets/images/mobile/image-fisheye.jpg);
+
+  @each $name in $image-names {
+    $i: list.index($image-names, $name);
+
+    div:nth-of-type(#{$i}) {
+      background-image: linear-gradient(
+          var(--clr-gradient-top),
+          var(--clr-gradient-bottom)
+        ),
+        url(../assets/images/mobile/image-#{$name}.jpg);
+
+      @include breakpoints.media(large) {
+        background-image: linear-gradient(
+            var(--clr-gradient-top),
+            var(--clr-gradient-bottom)
+          ),
+          url(../assets/images/desktop/image-#{$name}.jpg);
+      }
+    }
+  }
+
+  button {
+    @include breakpoints.media(medium) {
+      grid-column: 4;
+      grid-row: 1;
+    }
+  }
 }

@@ -1,0 +1,8 @@
+@use "../abstracts/breakpoints" as breakpoints;
+
+@include breakpoints.media(medium) {
+  .footer__links {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}

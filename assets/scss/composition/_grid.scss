@@ -1,3 +1,5 @@
+@use "../abstracts/breakpoints" as breakpoints;
+
 .grid {
   display: grid;
   gap: 1em;
@@ -19,4 +21,31 @@
 
 .grid-item-center {
   justify-self: center;
+}
+
+@include breakpoints.media(medium) {
+  .grid-lg-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-lg-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-lg-row {
+    display: grid;
+    grid-auto-flow: column;
+  }
+  .grid-item-left {
+    justify-self: start;
+  }
+  .grid-item-right {
+    justify-self: end;
+  }
+  .grid-span-3 {
+    grid-column: span 3;
+  }
+  .grid-span-2 {
+    grid-column: span 2;
+  }
 }
